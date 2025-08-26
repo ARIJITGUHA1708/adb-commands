@@ -22,6 +22,8 @@ Take image
 Open Specific application
 
     adb shell monkey -p <package_name> -c android.intent.category.LAUNCHER 1
+    adb shell monkey -p com.google.android.youtube 1
+    adb shell monkey -p com.android.settings -c android.intent.category.LAUNCHER 1
 
 Example
 
@@ -38,6 +40,33 @@ Install Apk
 Uninstall application
 
     adb uninstall <package_name>
+
+Click the power button
+
+    adb shell input keyevent 26
+
+Swipe the screen
+
+    adb shell input swipe 300 1000 300 500
+
+Enter password
+
+    adb shell input text "123456"
+
+Turn On Wifi
+
+    adb shell svc wifi enable
+
+Turn off wifi
+
+    adb shell svc wifi disable
+
+Get the Screen Resolution
+
+    adb shell wm size
+
+
+
 
 
 
